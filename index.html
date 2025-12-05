@@ -18,8 +18,10 @@
 <!-- xxADD link to stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
+  
   <title>Civic Lens</title>
 </head>
+<div id="container">
 <body>
 <!-- ADD semantic and validated HTML -->
 <!-- **********add id*********ADD skip to main content -->
@@ -45,6 +47,7 @@
         </ul>
       </nav>
   </header>
+  <main id="main">
       
       <section id="welcome">
         <h2>Welcome to Civic Lens</h2>
@@ -54,6 +57,7 @@
       </section>
       <section id="breaking-news">
         <h2>Breaking News</h2>
+        
         <article>
           <!-- article correct tag??? -->
         <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
@@ -67,45 +71,47 @@
             <video src="videos/voter-suppression.mp4" controls></video>
                       <!-- ******double check video controls etc******** -->
         </article>
+        
       </section>
       <section id="featured-articles">
       <h2>Featured Articles</h2>
+        <div class="articles">
+        <div><h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p></div>
         
-        <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
-        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+        <div><h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+        <p>An investigative series on cash bail and its disproportionate impact.</p></div>
         
-        <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
-        <p>An investigative series on cash bail and its disproportionate impact.</p>
+        <div><h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+        <p>Humanizing the labor that keeps households and economies afloat.</p></div>
         
-        <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
-        <p>Humanizing the labor that keeps households and economies afloat.</p>
+        <div><h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+        <p>Data visualization showing systemic inequality in real estate today.</p></div>
         
-        <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
-        <p>Data visualization showing systemic inequality in real estate today.</p>
+        <div><h3>Climate Injustice: Who Pays for Pollution?</h3>
+        <p>Communities of color bear the brunt of environmental damage.</p></div>
         
-        <h3>Climate Injustice: Who Pays for Pollution?</h3>
-        <p>Communities of color bear the brunt of environmental damage.</p>
+        <div><h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p></div>
         
-        <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
-        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
-        
-        <h3>Food Deserts and Corporate Abandonment</h3>
+        <div><h3>Food Deserts and Corporate Abandonment</h3>
         <p>Why access to nutrition is a zip code lottery.</p>
-        
-        <h3>Policing Mental Health: A Broken Response System</h3>
+        </div>
+        <div><h3>Policing Mental Health: A Broken Response System</h3>
         <p>Examining police interactions with those in crisis.</p>
-        
-        <h3>The Disinformation Economy</h3>
+        </div>
+        <div><h3>The Disinformation Economy</h3>
         <p>Tracing profit motives behind fake news empires.</p>
-        
-        <h3>Facing the Algorithm: AI and Racial Bias</h3>
+        </div>
+        <div><h3>Facing the Algorithm: AI and Racial Bias</h3>
         <p>The coded inequalities that shape our lives.</p>
+        </div>
+        <div><h3>The Voting Maze</h3>
+        <p>A guide to understanding your rights amid changing laws.</p></div>
         
-        <h3>The Voting Maze</h3>
-        <p>A guide to understanding your rights amid changing laws.</p>
-        
-        <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
-        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+        <div><h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p></div>
+        </div>
       </section>
       <section id="alerts">
         
@@ -118,44 +124,49 @@
           <label for="tel">Mobile</label>
           <input type="tel" id="tel" name="tel" required>
 
-        <fieldset required>
+        <fieldset>
           <legend>Notification Preferences</legend>
-          <input type="checkbox" id="breaking-news" name="preferences" value="breaking-news">
-          <label for="breaking-news">Breaking News</label>
-
-          <input type="checkbox" id="politics" name="preferences" value="politics">
-          <label for="politics">Politics</label>
-
-          <input type="checkbox" id="weather" name="preferences" value="weather">
-          <label for="weather">Weather</label>
           
-          <input type="checkbox" id="sports" name="preferences" value="sports">
-          <label for="sports">Sports</label>
+          <div><input type="checkbox" id="news" name="preferences" value="news">
+          <label for="news">Breaking News</label></div>
 
-          <input type="checkbox" id="entertainment" name="preferences" value="entertainment">
-          <label for="entertainment">Entertainment</label>
+          <div><input type="checkbox" id="politics" name="preferences" value="politics">
+          <label for="politics">Politics</label></div>
 
-          <input type="checkbox" id="world" name="preferences" value="world">
-          <label for="world">World</label>
+          <div><input type="checkbox" id="weather" name="preferences" value="weather">
+          <label for="weather">Weather</label></div>
+          
+          <div><input type="checkbox" id="sports" name="preferences" value="sports">
+          <label for="sports">Sports</label></div>
 
-          <input type="checkbox" id="financial" name="preferences" value="financial">
-          <label for="financial">Financial</label>
+          <div><input type="checkbox" id="entertainment" name="preferences" value="entertainment">
+          <label for="entertainment">Entertainment</label></div>
+
+          <div><input type="checkbox" id="world" name="preferences" value="world">
+          <label for="world">World</label></div>
+
+          <div><input type="checkbox" id="financial" name="preferences" value="financial">
+          <label for="financial">Financial</label></div>
         </fieldset>
 
           <button type="submit">Subscribe</button>
         </form>
       </section>
-      
-      <section id="social">
+      </main>
+       <footer>
+        <section id="social">
         <h2>Follow Us</h2>
-        Twitter/X
-        Instagram
-        YouTube
-        TikTok
-        LinkedIn
+        <p>Twitter/X</p>
+        <p>Instagram</p>
+        <p>YouTube</p>
+        <p>TikTok</p>
+        <p>LinkedIn</p>
+ 
       </section>
-        
-        &copy; 2025 Civic Lens. All rights reserved.
+      
+       
+        <p>&copy; 2025 Civic Lens. All rights reserved.</p>
+      </footer>
         
         
   <script>
@@ -178,5 +189,7 @@
       }
     });
   </script>
+  
 </body>
+</div>
 </html>

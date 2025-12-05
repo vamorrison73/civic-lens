@@ -1,11 +1,58 @@
-/* CSS by ///ADD/// YOUR NAME */
+/* CSS by ///ADD/// Victoria Morrison */
 
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ///ADD/// CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
 
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------------------------------------------------------------- */
 /* Root Variables */
 :root {
   --blue-bulletin: #1D3557;
@@ -38,24 +85,327 @@ body.dark-mode {
   cursor: pointer;
 }
 
+main {
+  margin: 0 auto;
+  padding: 2rem 4rem;
+}
+/* ------------------------------------------------------------------------ */
 /* ///ADD/// Skip Link Styles */
-.skip-link 
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus{
+  position: static;
+  width: auto;
+  height: auto;
+}
+
 /* ///ADD/// Navigation Styles */
-.tagline
-.mobile-nav
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: var(--watchdog-white);
+}
+.tagline {
+  margin: 2rem 0;
+  /* color: var(--watchdog-white); */
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+#welcome .tagline {
+    text-align: center;
+
+}
+
+header {
+  background-color: var(--blue-bulletin);
+  padding: 2rem 4rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  width:fit-content;
+  
+}
+.mobile-nav li a {
+  padding: .5rem;
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  text-transform: uppercase;
+}
+
+.mobile-nav li a:hover {
+  background-color: var(--blue-bulletin);
+  border: 1px solid var(--news-flash);
+  color: var(--watchdog-white);
+  transition: var(--transition);
+}
+
+.mobile-nav li a {
+  color: var(--watchdog-white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  list-style: none;
+}
 
 /* ///ADD/// Global Layout Styles */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main {
+  /* background-color: var(--truth-text); */
+}
+
+/* Featured articles layout */
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.articles div:hover {
+  transform: scale(1.1);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.articles h3 {
+  border-bottom: 1px solid var(--story-subtitle);
+}
+.articles div {
+  border: 0.5px solid var(--story-subtitle);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
 
 /* ///ADD/// Global Text Styles */
+h2 {
+  font-size: 1.5rem;
+  /* color: var(--watchdog-white); */
+  font-family: var(--font-heading);
+  font-weight: 200;
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  /* color: var(--watchdog-white); */
+  font-family: var(--font-heading);
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  /* color: var(--watchdog-white); */
+}
+
+/* breaking news articles section styling */
+
+#breaking-news {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+#breaking-news h2 {
+  grid-column: 1/-1;
+  margin-top: 1rem;
+}
+
+#breaking-news article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--news-flash);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  color: var(--watchdog-white);
+}
+
+/* video autoplay??????????? */
+
+#breaking-news article:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
+/* size transition */
+}
+
+#breaking-news h3 {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid var(--watchdog-white);
+}
+
+/* form styling */
+
+form {
+  width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: var(--news-flash);
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--watchdog-white);
+  font-family: var(--font-body);
+}
+
+form input, form label {
+  display: block;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid var(--truth-text);
+}
+
+
+fieldset div {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+fieldset legend {
+  text-transform: uppercase;
+}
+label {
+  padding: 5px 2px 2px 2px;
+}
+
+input {
+  padding: 5px;
+}
+form button {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin: 1rem auto;
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+form button:hover {
+  background-color: var(--watchdog-white);
+  color: var(--blue-bulletin);
+  border: 1px solid var(--blue-bulletin);
+  transition: var(--transition);
+}
+
+
+
+
+/* social styling */
+
+#social {
+  background-color: var(--blue-bulletin);
+  display: grid;
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr;
+  gap: .75rem;
+  width: 50%;
+}
+
+#social h2 {
+  grid-column: 1/-1;
+  margin-top: 1rem;
+}
+
+#social p {
+  display: block;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#social p:hover {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  border: 1px solid var(--news-flash);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+/* footer styling */
+footer {
+  background-color: var(--blue-bulletin);
+  padding: 2rem 4rem;
+  color: var(--watchdog-white);
+  
+}
+
+footer > p {
+  text-align: center;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+/* adding small bc i accidentally styled for large inititally */
+
+@media screen and (min-width: 500px) {
+  .articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+}
 
 
 /* ///ADD/// medium styles 620px */
+@media screen and (min-width: 620px) {
+  /* Featured articles layout */
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+}
+
 
 
 /* ///ADD/// large styles 920px */
 
+@media screen and (min-width: 920px) {
+  .articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 /* ///ADD/// x-large styles 1024px */
+
+@media screen and (min-width: 1094px) {
+  .articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
@@ -63,5 +413,5 @@ body.dark-mode {
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  
 }
